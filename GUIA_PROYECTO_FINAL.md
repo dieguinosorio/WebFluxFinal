@@ -58,6 +58,7 @@ El ZIP `Proyecto_Final_Customer_Service_Starter.zip` contiene:
 |---|---|---|---|
 | GET | `/api/customers` | `200 OK`, arreglo JSON; `[]` cuando está vacío | `Flux<Customer>` |
 | GET | `/api/customers/{id}` | `200 OK` o `404 Not Found` | `Mono<Customer>` |
+| GET | `/api/customers?id={id}` | Consulta por ID, alternativa a `/{id}`; requiere un UUID completo | `Mono<Customer>` |
 | POST | `/api/customers` | `201 Created`, cliente con ID generado | `Mono<Customer>` o `Mono<ResponseEntity<Customer>>` |
 | PUT | `/api/customers/{id}` | `200 OK` o `404 Not Found` | `Mono<Customer>` |
 | DELETE | `/api/customers/{id}` | `204 No Content` o `404 Not Found` | `Mono<Void>` o `Mono<ResponseEntity<Void>>` |
